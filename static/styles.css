@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100%;
+}
+
+ul{
+    list-style-type: none;
+     padding: 5px;
+}
+
+li{
+     padding: 5px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+}
+
+#map{
+    height: 100%;
+    width: 80%;
+}
+
+.options-box {
+    background: #ffd;
+    height: auto;
+    padding: 5px;
+    text-align: left;
+    width: 20%;
+}
+
+
+
+@media screen and (max-width: 932px){
+ 
+    .container {
+    width: 100%;
+    display: block;
+}
+    
+    #map{
+    width: 100%;
+    }
+    
+    .options-box {
+    text-align: center;
+    width: 100%;
+}
+}

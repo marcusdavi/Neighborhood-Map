@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/styles.css">
+	<script src="js/lib/jquery/jquery-3.4.0.min.js"></script>
+	
+    </head>
+    <body>
+        <div class="container">
+		  <div class="options-box">
+			 <h3>Natal-RN - Locais</h3>
+              <input placeholder="Digite para Filtrar" data-bind="value: searchTerm, valueUpdate: 'afterkeydown'">
+                <div id="listing">
+                    <ul data-bind="foreach:filteredList">
+                        <a href="#"><li class="list-item"  data-bind="text: title, click: $parent.itemListaClicado"></li></a>
+                    </ul>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+        <script src="js/lib/knockout/knockout-3.5.0.js"></script>
+        <script src="js/app.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvVRHYocJYfxemj3QVKUv9HjBpGlkjpto&v=3&callback=initMap" onerror="googleMapLoadError()"></script>
+    </body>
+</html>
